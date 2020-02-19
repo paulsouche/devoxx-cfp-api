@@ -1,0 +1,63 @@
+{
+  "name": "devoxx-cfp-api",
+  "version": "1.0.0-alpha.0",
+  "description": "A nestjs API presented at Devoxx France 2020",
+  "authors": [
+    "Paul Souche <paul.souche@gmail.com>",
+    "Sylvain Pontoreau <sylvain.pontoreau@gmail.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:paulsouche/devoxx-cfp-api.git"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "start": "nodemon",
+    "start:debug": "nodemon --exec node --inspect-brk -r ts-node/register src/main.ts",
+    "start:prod": "node dist/main",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
+  },
+  "dependencies": {
+    "@nestjs/common": "^6.11.7",
+    "@nestjs/core": "^6.11.7",
+    "@nestjs/platform-express": "^6.10.14",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.4",
+    "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^6.11.7",
+    "@types/express": "^4.17.2",
+    "@types/jest": "^25.1.2",
+    "@types/node": "^13.7.2",
+    "@types/supertest": "^2.0.8",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "supertest": "^4.0.2",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.6.2",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "extends": "tslint:latest",
+    "rules": {
+        "interface-name": false,
+        "member-access": false,
+        "no-submodule-imports": true,
+        "quotemark": [
+            true,
+            "single"
+        ]
+    }
+}

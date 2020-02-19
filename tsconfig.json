@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "module": "commonjs",
+    "removeComments": true,
+    "noEmit": true,
+    "noEmitHelpers": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "target": "es2020",
+    "lib": ["esnext"]
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "**/*spec.ts"
+  ]
+}
